@@ -1,0 +1,139 @@
+<div class="parallax-container">
+  <div class="parallax-img"><img src="{{fressia.images}}" alt=""></div>
+</div>
+<div class="section container">
+    <div class="row  center">
+      <h2 class="header">{{fressia.title}}</h2>
+      <h5 class="green-text">{{fressia.date}}</h5>
+      <fb-like></fb-like>
+      <linkedin-share></linkedin-share>
+    </div>
+    <div class="main-description">
+       <p style="white-space: pre-line;">
+        {{fressia.main}}
+       </p>
+    </div>
+    <div class="row" *ngIf="images.length > 0;">
+        <div class="col s12 m6 l4" *ngFor="let image of images">
+            <div class="card">
+                <div class="card-image">
+                  <img class="materialboxed" width="650" src="{{image.images}}">
+                  <span class="card-title">{{image.titulo}}</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div   *ngIf="isAdmin" class="btns center">
+        <a class="btn-floating btn purple pulse modal-trigger" href="#modal1"><i class="material-icons">collections</i></a>
+
+        <a class="btn-floating btn-large cyan pulse modal-trigger" href="#modal2"><i class="material-icons">create</i></a>
+
+    </div>
+
+
+      <!-- agregar contenido del evetno -->
+
+    <div id="modal2" class="modal modal-fixed-footer">
+      <div class="modal-content">
+    <div *ngIf="isAdmin" class="row">
+      <div class="col s12 m12">
+        <div class="card">
+            <div class="card-content">
+              <span class="card-title">Contenido del Evento</span>
+                  <form (ngSubmit)="SubmitEvent(fressia)">
+                    <div class="row center">
+                      <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <textarea id="icon_prefix2" class="materialize-textarea" name="main" [(ngModel)]="fressia.main"></textarea>
+                      </div>
+                      <div class="input-field col s12">
+                        <!-- <input type="hidden" class="validate"  [value]="urlImage | async"  name="images" #imageURL> -->
+                      </div>
+                      <button type="submit" value="publicar" class="btn purple darken-1">enviar</button>
+                  </div>
+                  </form>
+            </div>
+            </div>
+      </div>
+  </div>
+      </div>
+      <div class="modal-footer">
+          <a  class="modal-close waves-effect waves-green btn-flat"> <i class="material-icons">close</i></a>
+      </div>
+    </div>
+
+
+  <!-- agregar imagen -->
+
+
+   <!-- Modal Structure -->
+   <div id="modal1" class="modal center">
+    <div *ngIf="isAdmin" class="">
+      <div class="card-content">
+      <form (ngSubmit)="addEventImage(fressia)" >
+        <div class="row">
+          <div class="input-field col s5">
+            <i class="material-icons prefix">mode_edit</i>
+            <textarea id="icon_prefix2" class="materialize-textarea" name="description" [(ngModel)]="inputImages.titulo"></textarea>
+
+          </div>
+          <div class="input-field ">
+            <input type="file" multiple accept=".png, .jpg, .jpeg" (change)="onUpload($event)">
+          </div>
+
+          <div class="progress col6">
+            <div [style.width]="(uploadPercent |  async)+'%'" class="determinate dsblue"></div>
+        </div>
+          <div class="input-field col s12">
+            <input class="validate" type="hidden"   [value]="urlImage | async"  name="images" #imageURL>
+          </div>
+        <button type="submit" *ngIf="urlImage | async; else btnDisabled" value="Agregar"  class="btn purple darken-1">Enviar</button>
+        <ng-template #btnDisabled>
+          <button type="submit" value="Agregar" disabled='true' class="btn purple btn-secondary">Enviar</button>
+        </ng-template>
+      </div>
+      </form>
+      </div>
+      </div>
+     <div class="modal-footer">
+       <a  class="modal-close waves-effect waves-green btn-flat"> <i class="material-icons">close</i></a>
+     </div>
+   </div>
+
+
+<!-- COMENTARIOS -->
+
+    <form class="center" (ngSubmit)="addComentarios()" >
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="pulse white material-icons prefix">comment</i>
+          <textarea id="icon_prefix2" class="materialize-textarea coment white" name="description" value="Insertar comentario"
+          [(ngModel)]="comentario.contenido"></textarea>
+        </div>
+        <div class="col s12">
+            <button  type="submit" class="btn purple btn-secondary"> Comentar</button>
+        </div>
+      </div>
+    </form>
+
+  <div *ngFor="let coment of comentarios"  class="row">
+    <div class="col  s12">
+    <div class="card-panel white">
+    <span class="dark-text">
+          <span style="white-space: pre-line;">{{coment.contenido}}</span>
+    </span>
+  </div>
+  <div   class="infoComent">
+    <div class="date">
+      <i class="material-icons prefix lsgrey-text">today</i>
+        <p>{{coment.fecha.nanoseconds | date:'dd/MM/yyyy hh:mm:ss a'}}</p>
+    </div>
+    <div class="name">
+       <i class="material-icons prefix lsgrey-text">person_pin</i>
+        <p>{{coment.usuario}}</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>

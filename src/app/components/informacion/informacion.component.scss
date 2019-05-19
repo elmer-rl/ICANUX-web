@@ -1,0 +1,97 @@
+.center{
+  text-align: center;
+}
+.parallax-img img{
+  width: 100%;
+  background-size: cover;
+}
+.parallax-container{
+  width: 100%;
+  height: 70vh;
+}
+@media only screen and (max-width: 900px) {
+  .parallax-container{
+    width: 100%;
+    height: 100%;
+}
+}
+
+.progress{
+  position: relative;
+height: 6px;
+display: block;
+width: 100%;
+background-color: skyblue;
+border-radius: 2px;
+margin: 0.5rem 0 1rem 0;
+overflow: hidden;
+}
+
+
+
+textarea {
+  white-space: pre-line;
+}
+.infoComent{
+  display: flex;
+  flex-wrap:wrap;
+  font-size:12px;
+  margin-left:10px;
+}
+.infoComent p {
+  margin: 0;
+  padding: 0 7px;
+  margin-top:-10px;
+  color:gray;
+}
+.card-panel{
+  box-shadow:none;
+  border:1px solid #e4e4e4;
+  border-radius:6px;
+  padding:15px;
+}
+
+.card-panel:hover{
+  box-shadow:none;
+  border:1px solid #silver;
+  border-radius:6px;
+  padding:15px;
+  box-shadow: 0px 0px 0px 2px silver;
+}
+.dark-text{
+  color:rgba(0, 0, 0, 0.71);  
+}
+.coment{
+  border: 1px solid #c0bcbc;padding: 20px; border-radius: 10px;
+}
+.date{
+  display:flex;
+}
+.date i{
+  margin-top:-10px;
+}
+.name{
+  display:flex;
+  margin-left:20px;
+}
+.name i{
+  margin-top:-10px;
+  
+}
+
+//colorssss
+
+.dsblue{
+  background-color:deepskyblue;
+}
+.lsgrey-text{
+  color:lightslategray;
+}
+.card{
+  box-shadow:none;
+  border: 1px solid silver;
+}
+.card:hover{
+  
+  border: 1px solid silver;
+}

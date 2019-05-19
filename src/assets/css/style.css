@@ -1,0 +1,337 @@
+* {
+	margin: 0;
+	padding: 0;
+
+}
+
+body{
+	/*background-image: url(../img/fondo.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+
+	background-size: 100%;
+background-size: cover;
+*/
+font-family: roboto;
+font-size: 1.2em;
+}
+
+.fondo-oscuro{
+
+    background-color: #292929;
+}
+
+#f-i{
+	background-image: url(../img/bg.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+.derecha{
+align-items: center;
+margin-top: 15px;
+}
+
+.img-helmi{
+ height: 50px;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+
+}
+.form{
+
+    height: 100%;
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+    border:2px solid white;
+    border-width: 0;
+    transition: all .3s;
+	}
+
+
+
+.form:hover{
+	border-width: 1;
+}
+
+.icon-i{
+	height: 170px;
+    width: 170px;
+    border: 2px solid red;
+     border-radius: 50%;
+	transition: all .2s;
+	opacity: 0.8;
+	transform: scale(0.9);
+	cursor: pointer;
+
+}
+
+
+
+.centrar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.title{
+	font-size: 2em;
+	color: white;
+}
+.icon-i:hover{
+
+	 height: 171px;
+    width: 171px;
+    border: 2px solid red;
+     border-radius: 50%;
+	opacity: 1 ;
+  border: 3px solid white;
+	box-shadow: 2px 2px 40px 0px ;
+	transform: scale(1);
+}
+.fecha{
+	background-color: black; border:1px solid orangered; color:red;
+}
+.title-pub{
+	color: white;
+}
+.content-pub{
+	color: silver;
+}
+.icon-ii{
+height: 171px;
+    width: 171px;
+    border: 2px solid red;
+    border-radius: 50%;
+    opacity: 1;
+    background-color: #ffffffe3;
+    border: 3px solid #d9534f;
+
+}
+
+
+#icono{
+	font-size: 150px;
+	color:#752323;
+	position: 50%;
+	margin-top: 15px;
+	padding: 20px ,20px;
+}
+#icono:hover{
+	font-size: 155px;
+	color: red;
+}
+.fondo-gris {
+    background-color: #171717;
+    color: white;
+}
+.borde-negro{
+	border-color: black;
+}
+#user{
+	background-color: #262426;;
+	color: silver;
+	font-weight: bold;
+}
+.nombre{
+	background-color: white;
+	color: black;
+}
+
+#pass{
+	background-color: #262426;;
+	color: silver;
+	font-weight: bold;
+}
+#imgenavatar {
+	width: 200px;
+	height: 250px;
+	}
+#imgusuario{
+	width: 100px;
+	height: 130px;
+	}
+.imgusuario{
+	width: 100px;
+	height: 130px;
+	}
+#imagenusuario{
+	width: 300px;
+	height: 350px;
+}
+#usuario{
+	width: 100px;
+	height: 140px;
+
+	}
+
+.formulario{
+	color: white;
+	background-color: black;
+    margin: auto;
+    margin-top: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px 1px rgba(0,0,0,0.8);
+    position: relative;
+}
+
+#categoria{
+	background-color:white;
+	color: black;
+	font-weight: bold;
+}
+.boton-cambiar{
+	background-color: 	maroon;
+	border-color: maroon;
+	color: white;
+}
+.boton-cambiar:hover{
+	background-color: red;
+	color: white;
+	border-color: red;
+}
+
+.boton-user{
+	background-color:black;
+	border-color:gray;
+	color: gray;
+}
+.boton-user:hover{
+	background-color: black;
+	color: silver;
+	border-color: silver;
+}
+
+.boton-salir{
+	background-color:black;
+	border-color:maroon;
+	color: white;
+}
+.boton-salir:hover{
+	background-color: black;
+	color: white;
+	border-color: red;
+}
+
+.boton-editar {
+	background-color: black;
+	color: white;
+	border-color: gray;
+}
+
+.boton-editar:hover{
+	background-color: aqua;
+	color: black;
+	border-color: black;
+}
+
+.boton-enviar {
+	background-color:red;
+	color: white;
+	border-color: red;
+	width: 80%;
+}
+
+.boton-enviar:hover{
+	background-color: black;
+	color: white;
+	border-color: red;
+}
+
+
+.boton-cargar{
+	background-color: black;
+	color: aqua;
+	border-color: aqua;
+}
+
+.boton-cargar:hover{
+	background-color: black;
+	color: blue;
+	border-color: blue;
+}
+
+
+.boton-agregar{
+	background-color: black;
+	color: white;
+	border-color: green;
+}
+.boton-agregar:hover{
+	background-color: black;
+	color: white;
+	border-color: lime;
+}
+#miimagen{
+     -webkit-animation: anim2 ease-in-out 3s infinite alternate; }
+@-webkit-keyframes anim2
+{
+   from {left: 0px;   -webkit-transform: scale(1.0) rotate(0deg)   }
+   50%  {left: 250px; -webkit-transform: scale(0.8) rotate(10deg)  }
+   to   {left: 500px; -webkit-transform: scale(1.2) rotate(20deg) }
+}
+
+#milogo:hover{
+
+}
+
+.relativo{
+	position: relative;
+	float: left;
+	margin:  0 8px 0 0;
+}
+
+.relativo span{
+	position: absolute;
+	z-index: 99;
+	top: 0;
+	right: 0;
+	background-color: fuchsia;
+	color:white;
+}
+#titulopost{
+	color: aqua;
+}
+
+.menu-activo-admin{
+	background-color: aqua;
+	color: black;
+}
+.menu-activo-admin:hover{
+	background-color: aqua;
+	color: black;
+}
+
+
+
+@media all and (max-width: 650px) {
+	#f-i{
+	background-image: none;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: black;
+	padding: 0.5em;
+	height: auto;
+	}
+
+
+	.icon-i{
+
+	 height: 171px;
+    width: 171px;
+    border: 2px solid red;
+     border-radius: 50%;
+	opacity: 1 ;
+  border: 3px solid white;
+	box-shadow: 2px 2px 40px 0px ;
+	transform: scale(1);
+}
+
+#icono{
+	font-size: 155px;
+	color: red;
+}
+}

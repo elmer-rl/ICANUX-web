@@ -1,0 +1,37 @@
+<div class="center-form">
+    <div class="container center">
+        <div class="container-form white z-depth-2">
+          <ul class="tabs red">
+            <li class="tab col s3"><a class="white-text active" href="#login">login</a></li>
+          </ul>
+          <div id="login" class="">
+            <form #formLogin="ngForm" (submit)="onLogin()" >
+              <div class="form-container">
+                <h3 class="teal-text">¡Hola!</h3>
+                <div class="social-media">
+                  <a (click)="onLoginFacebook()" class="btn blue dark-blue"><i class="fa fa-facebook">acebook</i></a>
+                  <a (click)="onLoginGoogle()" class="btn red"><i class="fa fa-google">oogle</i></a>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input [(ngModel)]="email" name="email" id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input [(ngModel)]="pass" id="pass" name="pass" type="password" class="validate">
+                    <label for="password">Contraseña</label>
+                  </div>
+                </div>
+                  <button class="btn waves-effect waves-light red" type="submit" name="action">Ingresar</button>
+                <br>
+                <br>
+                  <a href="">Olvidaste tu contraseña?</a>
+              </div>
+            </form>
+          </div>
+        </div>
+        </div>
+
+</div>

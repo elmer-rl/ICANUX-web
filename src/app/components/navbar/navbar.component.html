@@ -1,0 +1,26 @@
+<!-- <nav class="dark green">
+    <div class="nav-wrapper container">
+      <a href="#!" class="brand-logo">Pachapp</a>
+      <ul class="right">
+        <li><a class="waves-effect waves-light btn btn purple darken-1"  [routerLink]="['/login']">Login</a></li>
+        <li><a class="waves-effect waves-light btn btn purple darken-1"  [routerLink]="['/register']">Register</a></li>
+        <li *ngIf="isLogged"><a class="waves-effect waves-light btn btn purple darken-1"  [routerLink]="['/login']">Elmer Ramos</a></li>
+      </ul>
+    </div>
+  </nav> -->
+<header class="header">
+  <div class="width container">
+  <a [routerLink]="['/']" class="logo"><img src="https://icanux.org/static/img/15158675841515047669banner.png" alt=""></a>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon btn-floating red pulse" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a [routerLink]="['/']">Home</a></li>
+    <li *ngIf="isLogged"><a class="">{{user.name}}</a></li>
+    <li *ngIf="!isLogged"><a class=""  [routerLink]="['/register']">Register</a></li>
+    <li *ngIf="!isLogged"><a class=""  [routerLink]="['/login']">Login</a></li>
+    <li><a class=""  [routerLink]="['/noticias']">Noticias</a></li>
+    <li *ngIf="isLogged" ><a (click)="onLogout()" class="" href="">Salir</a></li>
+    <a  *ngIf="isLogged" ><img src="{{user.photourl}}" class="rounded-circle img-thumbnail" alt="profile"></a>
+  </ul>
+</div>
+</header>
