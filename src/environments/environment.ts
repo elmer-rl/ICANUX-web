@@ -4,15 +4,7 @@
 
 export const environment = {
   production: false,
-  firebase: {
-    apiKey: "AIzaSyCGjWwOoxDanEBTCUrmO6fKq6TXTArKeO0",
-    authDomain: "icanux-352f7.firebaseapp.com",
-    databaseURL: "https://icanux-352f7.firebaseio.com",
-    projectId: "icanux-352f7",
-    storageBucket: "icanux-352f7.appspot.com",
-    messagingSenderId: "111111169382",
-    appId: "1:111111169382:web:a41a915e3f66867f"
-  }
+  
 };
 
 /*
